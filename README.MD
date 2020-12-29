@@ -34,6 +34,21 @@ rasa shell --debug
 
 关于rasa的指令说明，[见链接](https://rasa.com/docs/rasa/command-line-interface)。
 
+测试示例
+
+```shell
+Your input ->  上海的天气  
+查询结果为：
+            上海的天气情况为：多云，气温：4-15 °C
+Your input ->  好的，我先走了
+再见，Enjoy!
+
+Your input ->	 你好
+你好
+```
+
+
+
 ## 详细介绍
 
 在终端输入rasa init指令后rasa将为你自动创建一个workspace。每个部分的说明如下：
