@@ -1,0 +1,30 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - weather
+
+slots:
+  location:
+    type: text
+  # matches:
+  #   type: any ## 需要缓存一个槽值，用于缓存返回的结果，或者用dispatcher见一个队列返回，见 https://github.com/RasaHQ/rasa-demo/blob/master/actions/actions.py
+
+entities:
+  - location
+
+actions:
+  - action_report_weather ## 一个只负责写
+
+responses:
+  utter_greet:
+  - text: 你好
+  utter_goodbye:
+  - text: 再见，Enjoy!
+  # utter_report_weather:
+  # - text: "{matches}"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

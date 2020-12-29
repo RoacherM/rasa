@@ -1,0 +1,18 @@
+version: "2"
+stories:
+
+- story: greet_story
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- story: goodbye_story
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: weather_story
+  steps:
+    - intent: weather
+    - action: action_report_weather
+    # - action: utter_report_weather
