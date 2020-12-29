@@ -2,14 +2,11 @@
 
 '''
 Author: ByronVon
-Email: wangy@craiditx.com
+Email: sir.housir@gmail.com
 Version: 
 Date: 2020-12-25 13:44:03
-LastEditTime: 2020-12-28 18:00:34
+LastEditTime: 2020-12-29 11:29:36
 '''
-import logging
-logging.basicConfig(filename='api.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
-
 from typing import Text, Dict, Any, List
 
 from rasa_sdk.executor import CollectingDispatcher
@@ -34,12 +31,6 @@ class ActionReportWeather(Action):
         
         location = tracker.get_slot('location')
         contexts = tracker.latest_message['text']
-        # print(type(contexts))
-        # contexts = tracker.get_slot('')
-        logging.debug(location)
-        logging.debug(contexts)
-
-        # data_time_number = text_date_to_number_date(data_time)
             
         weather_data = "{}".format(get_text_weather_date(location))
 
