@@ -1,12 +1,14 @@
 # RASA2.X版本对话机器人demo
 
-一个基于rasa2.2.x版本的对话机器人，以调用心知天气api查询天气为例介绍该对话引擎的基础用法。
+一个基于rasa2.x版本的对话机器人，以调用心知天气api查询天气为例介绍该对话引擎的基础用法。
 
 ## 使用流程
 
 rasa的训练使用流程比较简单，进入初始化好（rasa init）的工作路径中，
 
-先使用rasa train训练，以本demo为例
+先使用rasa train训练，以本demo为例，需要事先将中文词向量文件下载到/data路径。
+
+链接: https://pan.baidu.com/s/1HnFyKdTdT4yjAhdCLZg0vA  密码: fsvi
 
 ```shell
 rasa train -c configs.yml -d domain.yml --data data/demo/
@@ -208,10 +210,5 @@ session_config:
 action_endpoint:
   url: "http://localhost:5055/webhook"
 ```
-
-## 中文词向量参数文件
-
-链接: https://pan.baidu.com/s/1HnFyKdTdT4yjAhdCLZg0vA  密码: fsvi
-下载后放置/data路径中
 ## TODO
 
